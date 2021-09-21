@@ -1,12 +1,4 @@
-import React from "react";
-import { InputUser } from "./InputUser";
-import { View } from "react-native";
-import { Headers } from "./Header";
-
-const App = () => (
-  <View>
-    <Headers />
-    <InputUser />
-  </View>
-);
-export default App;
+import App from "./src/screen/NewTask";
+<View>
+  <App />
+</View>;
