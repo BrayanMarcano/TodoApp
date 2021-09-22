@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
   left: {
     color: "#ffffff",
     fontSize: 20,
+    paddingLeft: 15,
   },
   main: {
     textAlign: "center",
@@ -31,5 +32,6 @@ const styles = StyleSheet.create({
     textAlign: "right",
     color: "#ffffff",
     fontSize: 20,
+    paddingRight: 15,
   },
 });

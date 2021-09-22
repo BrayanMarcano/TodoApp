@@ -1,12 +1,11 @@
 import React from "react";
-import { InputUser } from "./src/components/InputUser";
-import { View } from "react-native";
-import { Header } from "./src/components/Header";
+import { InputUser } from "../components/InputUser";
+import { View, SafeAreaView } from "react-native";
+import { Header } from "../components/Header";
 
-const App = () => (
-  <View>
+export const NewTask = () => (
+  <SafeAreaView style= {{backgroundColor: '#1F86FF'}}>
     <Header />
     <InputUser />
-  </View>
+  </SafeAreaView>
 );
-export default App;
