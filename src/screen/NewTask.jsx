@@ -3,9 +3,16 @@ import { InputUser } from "../components/InputUser";
 import { View, SafeAreaView } from "react-native";
 import { Header } from "../components/Header";
 
+
 export const NewTask = () => (
-  <SafeAreaView style= {{backgroundColor: ' #1F86FF'}}>
+  <SafeAreaView style={styles.container}>
     <Header />
     <InputUser />
   </SafeAreaView>
 );
+
+export const styles = StyleSheet.create({
+  container: {
+    backgroundColor: colors.PRIMARY,
+  },
+});
