@@ -26,12 +26,11 @@ const DATA = [
     title: "Hacer la segunda pantalla",
     subtitle: "Boton de añadir",
   },
-  
 ];
 
 const renderItem = ({ item }) => (
   <CheckBox title={item.title} subtitle={item.subtitle} />
-)
+);
 export const Task = () => {
   return (
     <SafeAreaView style={styles.container}>

@@ -4,10 +4,10 @@ import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../constants/colors";
 
 export const CheckBox = ({ title, subtitle }) => {
-  const [checked, onChange] = React.useState();
+  const [checked, onChange] = React.useState(false);
 
   function onCheckmarkPress() {
-    onChange(prevState => !prevState);
+    onChange((prevState) => !prevState);
   }
 
   return (
@@ -17,7 +17,7 @@ export const CheckBox = ({ title, subtitle }) => {
           <Text style={styles.principaltext}>{title}</Text>
           <Text style={styles.secondarytext}>{subtitle}</Text>
         </View>
-        <Pressable style={{ padding: 15 }} onPress={onCheckmarkPress}>
+        <Pressable style={styles.Pressable} onPress={onCheckmarkPress}>
           <View
             style={[styles.checkboxBase, checked && styles.checkboxChecked]}
           >
@@ -62,5 +62,8 @@ export const styles = StyleSheet.create({
     backgroundColor: "#FF197B",
     justifyContent: "center",
     alignItems: "center",
+  },
+  Pressable: {
+    padding: 15,
   },
 });

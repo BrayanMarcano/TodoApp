@@ -4,7 +4,7 @@ import { Text, StyleSheet, View } from "react-native";
 export const ClearButton = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.clear}>CLEAR ALL DONE</Text>
+      
     </View>
   );
 };
