@@ -1,8 +1,8 @@
 import React from "react";
 import { InputUser } from "../components/InputUser";
-import { View, SafeAreaView } from "react-native";
+import { SafeAreaView } from "react-native";
 import { Header } from "../components/Header";
-
+import { colors } from "../constants/colors";
 
 export const NewTask = () => (
   <SafeAreaView style={styles.container}>

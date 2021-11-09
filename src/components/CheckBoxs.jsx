@@ -1,12 +1,13 @@
 import React from "react";
 import { Text, StyleSheet, View, Pressable } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
+import { colors } from "../constants/colors";
 
 export const CheckBox = ({ title, subtitle }) => {
-  const [checked, onChange] = React.useState(false);
+  const [checked, onChange] = React.useState();
 
   function onCheckmarkPress() {
-    onChange(!checked);
+    onChange(prevState => !prevState);
   }
 
   return (
@@ -16,11 +17,12 @@ export const CheckBox = ({ title, subtitle }) => {
           <Text style={styles.principaltext}>{title}</Text>
           <Text style={styles.secondarytext}>{subtitle}</Text>
         </View>
-        <Pressable
-          style={[styles.checkboxBase, checked && styles.checkboxChecked]}
-          onPress={onCheckmarkPress}
-        >
-          {checked && <Ionicons name="checkmark" size={24} color="white" />}
+        <Pressable style={{ padding: 15 }} onPress={onCheckmarkPress}>
+          <View
+            style={[styles.checkboxBase, checked && styles.checkboxChecked]}
+          >
+            {checked && <Ionicons name="checkmark" size={20} color="white" />}
+          </View>
         </Pressable>
       </View>
     </View>
@@ -46,7 +48,7 @@ export const styles = StyleSheet.create({
     fontSize: 16,
   },
   secondarytext: {
-    color: "#959595",
+    color: colors.SECONDARY,
     paddingTop: 4,
   },
   checkboxBase: {
@@ -54,7 +56,7 @@ export const styles = StyleSheet.create({
     height: 24,
     borderRadius: 5,
     borderWidth: 2,
-    borderColor: "#959595",
+    borderColor: colors.SECONDARY,
   },
   checkboxChecked: {
     backgroundColor: "#FF197B",
